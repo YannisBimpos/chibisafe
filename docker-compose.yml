@@ -1,10 +1,8 @@
-version: "3.7"
-
 services:
   chibisafe:
     image: chibisafe/chibisafe:latest
     environment:
-      - BASE_API_URL=http://localhost:8007
+      - BASE_API_URL=http://localhost:8008
     expose:
       - 8007
     restart: unless-stopped
@@ -18,7 +16,7 @@ services:
       - ./uploads:/app/uploads:rw
       - ./logs:/app/logs:rw
     expose:
-      - 8000
+      - 8008
     restart: unless-stopped
 
   caddy:

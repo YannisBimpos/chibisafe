@@ -4,9 +4,9 @@ services:
   chibisafe:
     image: chibisafe/chibisafe:latest
     environment:
-      - BASE_API_URL=http://chibisafe_server:8000
+      - BASE_API_URL=http://localhost:8007
     expose:
-      - 8001
+      - 8007
     restart: unless-stopped
 
   chibisafe_server:
